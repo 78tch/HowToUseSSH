@@ -33,8 +33,10 @@ vi /etc/systemd/logind.conf
 ` HandleLidSwitch=ignore `  
 
 ## 2. ローカルマシンの用意
-ログインするユーザーの「秘密鍵：id_rsa」と「公開鍵：id_rsa.pub」を作成する。  
-「公開鍵」を、SSHサーバーの「 ~/.ssh/ 」に、「authorized_keys」とリネイムして置く。  
+1. Windows の場合：  
+「Teraterm」をインストール。  
+2. Ubuntu の場合：
+「 openssh-client 」をインストール。  
 ## 3. まずはパスワード認証でログイン
 SSHサーバーで「パスワード認証」を有効にする。（学習のため。のちに無効にする。）
 /etc/ssh/sshd_config 
@@ -43,8 +45,20 @@ PasswordAuthentication yes
 user00@RMTSSHSRV:~$ sudo service ssh restart
 ```
 とする。  
-
+※「Teraterm」では「パスフレーズ」にはパスワードを入れる。
 ## 4. 公開鍵認証でログイン
+ログインするユーザーの「秘密鍵：id_rsa」と「公開鍵：id_rsa.pub」を作成して、「公開鍵」を、SSHサーバーの「 ~/.ssh/ 」に「authorized_keys」とリネイムして置き、「秘密鍵」をローカルマシンのしかるべき場所に置き、SSHクライアントに認識させる。  
+1. SSHサーバー側で鍵作成する場合
+```Bash
+user00@RMTSSHSRV:~$ ssh-keygen
+user00@RMTSSHSRV:~$ mv id_rsa.pub authorized_keys
+```
+「id_rsa」をローカルマシンに持っていく。
+
+2. ローカルマシンで鍵作成する場合
+「id_rsa」と「id_rsa.pub」を作成し、  
+「id_rsa.pub」をSSHサーバーのログインするユーザーの「 ~/.ssh/ 」に「authorized_keys」とリネイムして置く。  
+  
 ## 5. リモートサーバーの設定ファイル
 ホスト認証  
 /etc/ssh/
@@ -57,4 +71,7 @@ user00@RMTSSHSRV:~$ sudo service ssh restart
 
 
 ## 6. ローカルマシンの設定ファイル
+サーバーの一覧：「 known_hosts」
+秘密鍵：「 id_rsa 」
+
 ## 7. さらに詳細な設定
