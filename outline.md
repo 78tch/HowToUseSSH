@@ -9,13 +9,15 @@
 |3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|少ない工程で実現
 |4|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
 |5|Ansible|簡単なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
+|6|Ansible|複雑なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
 
 ●各Stepの目指すところ：
 1. 物理的に２台のPCを用意し、１台からもう１台にSSHでログインできるようになる。
 2. Vagrant とVirtualbox を使って、Ubuntuマシン上に、複数台の仮想マシンを容易に導入・設定・破棄できるように、Vagrantfileを書けるようになる。
 3. １台の仮想マシンからもう１台の仮想マシンにSSHでログインできるようになる。
-4. ローカルマシン自身に対して、AnsibleのPlaybookを実行させる。
-5. ローカルマシンから操作して、リモートサーバーに対して、AnsibleのPlaybookを実行させる。
+4. ローカルマシン自身に対して、AnsibleのPlaybookを実行させることができる。
+5. ローカルマシンから操作して、リモートサーバーに対して、AnsibleのPlaybookを実行させることができる。
+6. ローカルマシンから操作して、リモートサーバーに対して、任意の設定をするAnsibleのPlaybookを書けるようになる。
 
 ## 物理的に２台のPCを用意し、１台からもう１台にSSHでログインできるようになる。
 1. 物理的に２台のPCを学習環境として用意する。
