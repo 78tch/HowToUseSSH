@@ -28,6 +28,10 @@
 
 
 ## Step2.Vagrant と Virtualbox を使って2台のVMを構築・設定・破棄する
+1. まずは `vagrant up` してみる。
+2. boxを指定して仮想マシンを起動、停止、破棄してみる。
+3. ホスト名やIPアドレスを指定してみる。
+4. 
 
 ## Step3.Vagrant で構築した2台のVM間でSSH接続する
 
