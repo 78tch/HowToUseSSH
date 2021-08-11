@@ -6,7 +6,7 @@
 |---|---|---|---|
 |1|SSH|２台の物理PCを用意しSSHで接続する。|ログインユーザーの公開鍵・秘密鍵の生成、配置
 |2|Vagrant|Vagrant と Virtualbox を使ってVMを導入・設定・破棄する。|Vagrant コマンド、Vagrantfileの書式・設定項目
-|3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|Vagrantでどこまで設定するか
+|3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|マルチマシン設定、Vagrantでどこまで設定するか
 |4|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
 |5|Ansible|簡単なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
 |6|Ansible|複雑なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
