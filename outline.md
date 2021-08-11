@@ -5,8 +5,8 @@
 |Step|項目|やること|ポイント|
 |---|---|---|---|
 |1|SSH|２台の物理PCを用意しSSHで接続する。|ログインユーザーの公開鍵・秘密鍵の生成、配置
-|2|Vagrant|Vagrant と Virtualbox を使って2台のVMを構築・設定・破棄する。|Vagrantfileの書式、設定項目、主なVagrant コマンド
-|3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|少ない工程で実現
+|2|Vagrant|Vagrant と Virtualbox を使ってVMを構築・設定・破棄する。|主なVagrant コマンド、Vagrantfileの書式・設定項目
+|3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|Vagrantでどこまで設定するか
 |4|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
 |5|Ansible|簡単なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
 |6|Ansible|複雑なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
@@ -26,15 +26,15 @@
 3. PC1に「openssh-server」をインストール、リモートログイン用のユーザーを作成し、ssh-keygenして秘密鍵と公開鍵を用意する。
 4. ローカルマシン
 
-
-## Step2.Vagrant と Virtualbox を使って2台のVMを構築・設定・破棄する
+## Step2.Vagrant と Virtualbox を使ってVMを構築・設定・破棄する
 1. まずは `vagrant up` してみる。
 2. boxを指定して仮想マシンを起動、停止、破棄してみる。
 3. ホスト名やIPアドレスを指定してみる。
-4. Vagrantfileに２台のVMの設定を記述する。
-5. vagrantでどこまで設定するか・シェルプロビジョニング
+4. vagrantでどこまで設定するか・シェルプロビジョニング
 
 ## Step3.Vagrant で構築した2台のVM間でSSH接続する
+1. Vagrantfileに２台のVMの設定を記述する。
+2. SSHの設定をする。
 
 ## Step4.簡単なPlaybookをローカルで実行
 
