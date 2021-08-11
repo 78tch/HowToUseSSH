@@ -5,13 +5,13 @@
 3. １台の仮想マシンからもう１台の仮想マシンにSSHでログインできるようになる。
 4. ローカルマシンから操作して、リモートサーバーに、AnsibleのPlaybookを実行させる。
 
-|項目|やること|ポイント
-|---|---|---
-|SSH|２台のPCを用意しSSHで接続する。|公開鍵・秘密鍵の生成、配置
-|Vagrant|Vagrant と Virtualbox を使って2台のVMを構築・設定・破棄する。|Vagrantfileの書式、設定項目
-|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|少ない工程で実現
-|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
-|Ansible|簡単なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
+|No|項目|やること|ポイント|
+|---|---|---|---|
+|1|SSH|２台のPCを用意しSSHで接続する。|公開鍵・秘密鍵の生成、配置
+|2|Vagrant|Vagrant と Virtualbox を使って2台のVMを構築・設定・破棄する。|Vagrantfileの書式、設定項目
+|3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|少ない工程で実現
+|4|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
+|5|Ansible|簡単なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
 
 ## 物理的に２台のPCを用意し、１台からもう１台にSSHでログインできるようになる。
 1. 物理的に２台のPCを学習環境として用意する。
