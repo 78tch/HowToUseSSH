@@ -5,7 +5,7 @@
 |Step|項目|やること|ポイント|
 |---|---|---|---|
 |1|SSH|２台の物理PCを用意しSSHで接続する。|ログインユーザーの公開鍵・秘密鍵の生成、配置
-|2|Vagrant|Vagrant と Virtualbox を使ってVMを構築・設定・破棄する。|主なVagrant コマンド、Vagrantfileの書式・設定項目
+|2|Vagrant|Vagrant と Virtualbox を使ってVMを導入・設定・破棄する。|Vagrant コマンド、Vagrantfileの書式・設定項目
 |3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|Vagrantでどこまで設定するか
 |4|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
 |5|Ansible|簡単なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
@@ -14,7 +14,7 @@
 
 ●各Stepの目指すところ：
 1. 物理的に２台のPCを用意し、１台からもう１台にSSHでログインできるようになる。
-2. vagrantコマンドとVagrantfileで、VMを容易に導入・設定・起動・停止・破棄できるようになる。
+2. vagrantコマンドとVagrantfileで、VMを容易に導入・設定・破棄できるようになる。
 3. Vagrantfileで２台のVMを設定し、１台の仮想マシンからもう１台の仮想マシンにSSHでログインできるようになる。
 4. ローカルマシン自身に対して、Ansibleの簡単なPlaybookを実行させることができる。
 5. ローカルマシンから操作して、リモートサーバーに対して、Ansibleの簡単なPlaybookを実行させることができる。
