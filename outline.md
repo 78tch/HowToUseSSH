@@ -10,7 +10,8 @@
 |4|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
 |5|Ansible|簡単なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
 |6|Ansible|複雑なPlaybookをリモートで実行|Playbook(YAML)の書式、設定項目
-
+  
+  
 ●各Stepの目指すところ：
 1. 物理的に２台のPCを用意し、１台からもう１台にSSHでログインできるようになる。
 2. Vagrant とVirtualbox を使って、Ubuntuマシン上に、複数台の仮想マシンを容易に導入・設定・破棄できるように、Vagrantfileを書けるようになる。
