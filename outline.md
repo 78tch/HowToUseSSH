@@ -68,6 +68,10 @@ https://www.vagrantup.com/docs/vagrantfile/machine_settings
 
 ## Step4.簡単なPlaybookをローカルで実行
 
+```sh
+user@localhost:~$ ansible-playbook test.yml
+```
+
 ## Step5.簡単なPlaybookをリモートで実行
 
 ## Step6.複雑なPlaybookをリモートで実行
