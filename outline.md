@@ -53,10 +53,14 @@
 
 |設定項目|実例|備考|
 |---|---|---|
+|BOX|config.vm.box = "ubuntu/hirsute64"||
+|BOXの更新確認|config.vm.box_check_update = false||
 |ホスト名|config.vm.hostname = "hoge"||
 |IP（ホスト）|config.vm.network :private_ network, ip:" 192. 168. 33. 11"||
 |IP（ブリッジ）|config.vm.network :public_ network, ip:" 192. 168. 33. 11"||
 
+●公式ドキュメント：  
+https://www.vagrantup.com/docs/vagrantfile/machine_settings
 
 ## Step3.Vagrant で構築した2台のVM間でSSH接続する
 1. Vagrantfileに２台のVMの設定を記述する。
