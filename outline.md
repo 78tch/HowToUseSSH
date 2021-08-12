@@ -41,6 +41,15 @@
 3. ホスト名やIPアドレスを指定してみる。
 4. vagrantでどこまで設定するか・シェルプロビジョニング
 
+|操作|サブコマンド|備考|
+|---|---|---|
+|状況確認|vagrant status||
+|起動|vagrant up||
+|停止|vagrant halt||
+|初期化|vagrant init||
+|BOX指定して初期化|vagrant init $USER/$BOX||
+
+
 |設定項目|実例|備考|
 |---|---|---|
 |ホスト名|config.vm.hostname = "hoge"||
