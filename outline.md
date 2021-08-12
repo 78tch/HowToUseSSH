@@ -15,7 +15,7 @@
 ●各Stepの目指すところ：
 1. 物理的に２台のPCを用意し、１台からもう１台にSSHでログインできるようになる。
 2. vagrantコマンドとVagrantfileで、VMを容易に導入・設定・破棄できるようになる。
-3. Vagrantfileで２台のVMを設定し、１台の仮想マシンからもう１台の仮想マシンにSSHでログインできるようになる。
+3. Vagrantfileで２台のVMを設定し、１台の仮想マシンからもう１台の仮想マシンにSSHでログインできるようになる。どこまでをVagrantfileで設定し、どこからをプロビジョニング（Ansible）で設定するのかを見極める。
 4. ローカルマシン自身に対して、Ansibleの簡単なPlaybookを実行させることができる。
 5. ローカルマシンから操作して、リモートサーバーに対して、Ansibleの簡単なPlaybookを実行させることができる。
 6. ローカルマシンから操作して、リモートサーバーに対して、AnsibleのPlaybookを書いて任意の設定ができるようになる。
@@ -25,6 +25,15 @@
 2. PC1(Ubuntu)をリモートサーバー、PC2(UbuntuとVMでWindows10)をローカルマシンとする。
 3. PC1に「openssh-server」をインストール、リモートログイン用のユーザーを作成し、ssh-keygenして秘密鍵と公開鍵を用意する。
 4. ローカルマシン
+
+|ポイント|実例|備考|
+|---|---|---|
+|リモートSSHサーバーの公開鍵|Remote:/etc/ssh/ssh_host_ecdsa_key.pub|接続時にフィンガープリントでサーバーの真性確認|
+|リモートSSHサーバーの秘密鍵|Remote:/etc/ssh/ssh_host_ecdsa_key||
+|ログインユーザーの鍵ペア作成|||
+|ログインユーザーの公開鍵の配置|Remote:~/.ssh/authorized_keys||
+|ログインユーザーの秘密鍵の配置|Local:~/.ssh/authorized_keys||
+|ローカルマシンにリモートサーバーを登録|~/.ssh/known_hosts||
 
 ## Step2.Vagrant と Virtualbox を使ってVMを構築・設定・破棄する
 1. まずは `vagrant up` してみる。
