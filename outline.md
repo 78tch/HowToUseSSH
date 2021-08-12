@@ -29,10 +29,10 @@
 |ポイント|実例|備考|
 |---|---|---|
 |リモートSSHサーバーの公開鍵|Remote:/etc/ssh/ssh_host_ecdsa_key.pub|サーバーの真性確認|
-|リモートSSHサーバーの秘密鍵|Remote:/etc/ssh/ssh_host_ecdsa_key||
-|ログインユーザーの鍵ペア作成|||
-|ログインユーザーの公開鍵の配置|Remote:~/.ssh/authorized_keys||
-|ログインユーザーの秘密鍵の配置|Local:~/.ssh/authorized_keys||
+|リモートSSHサーバーの秘密鍵|Remote:/etc/ssh/ssh_host_ecdsa_key|ecdsaがデフォ|
+|ログインユーザーの鍵ペア作成|`$ ssh-keygen` |rsaがデフォ|
+|ログインユーザーの公開鍵の配置|Remote:~/.ssh/authorized_keys|id_rsa.pubをコピー|
+|ログインユーザーの秘密鍵の配置|Local:~/.ssh/id_rsa|id_rsaをコピー|
 |ローカルマシンにリモートサーバーを登録|Local:~/.ssh/known_hosts||
 
 ## Step2.Vagrant と Virtualbox を使ってVMを構築・設定・破棄する
