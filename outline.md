@@ -28,7 +28,7 @@
 
 |ポイント|実例|備考|
 |---|---|---|
-|リモートSSHサーバーの公開鍵|Remote:/etc/ssh/ssh_host_ecdsa_key.pub|接続時にフィンガープリントでサーバーの真性確認|
+|リモートSSHサーバーの公開鍵|Remote:/etc/ssh/ssh_host_ecdsa_key.pub|サーバーの真性確認|
 |リモートSSHサーバーの秘密鍵|Remote:/etc/ssh/ssh_host_ecdsa_key||
 |ログインユーザーの鍵ペア作成|||
 |ログインユーザーの公開鍵の配置|Remote:~/.ssh/authorized_keys||
@@ -40,6 +40,13 @@
 2. boxを指定して仮想マシンを起動、停止、破棄してみる。
 3. ホスト名やIPアドレスを指定してみる。
 4. vagrantでどこまで設定するか・シェルプロビジョニング
+
+|設定項目|実例|備考|
+|---|---|---|
+|ホスト名|config.vm.hostname = "hoge"||
+|IP（ホスト）|config.vm.network :private_ network, ip:" 192. 168. 33. 11"||
+|IP（ブリッジ）|config.vm.network :public_ network, ip:" 192. 168. 33. 11"||
+
 
 ## Step3.Vagrant で構築した2台のVM間でSSH接続する
 1. Vagrantfileに２台のVMの設定を記述する。
