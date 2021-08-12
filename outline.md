@@ -4,7 +4,7 @@
 
 |Step|項目|やること|ポイント|
 |---|---|---|---|
-|1|SSH|２台の物理PCを用意しSSHで接続する。|ログインユーザーの公開鍵・秘密鍵の生成、配置
+|1|SSH|物理PCを２台用意しSSHで接続する。|ログインユーザーの公開鍵・秘密鍵の生成、配置
 |2|Vagrant|Vagrant と Virtualbox を使ってVMを導入・設定・破棄する。|Vagrant コマンド、Vagrantfileの書式・設定項目
 |3|SSH+Vagrant|Vagrant で構築した2台のVM間でSSH接続する。|マルチマシン設定、Vagrantでどこまで設定するか
 |4|Ansible|簡単なPlaybookをローカルで実行|Playbook(YAML)の書式、設定項目
@@ -20,7 +20,7 @@
 5. ローカルマシンから操作して、リモートサーバーに対して、Ansibleの簡単なPlaybookを実行させることができる。
 6. ローカルマシンから操作して、リモートサーバーに対して、AnsibleのPlaybookを書いて任意の設定ができるようになる。
 
-## Step1.２台の物理PCを用意しSSHで接続する
+## Step1.物理PCを２台用意しSSHで接続する
 1. 物理的に２台のPCを学習環境として用意する。
 2. PC1(Ubuntu)をリモートサーバー、PC2(UbuntuとVMでWindows10)をローカルマシンとする。
 3. PC1に「openssh-server」をインストール、リモートログイン用のユーザーを作成し、ssh-keygenして秘密鍵と公開鍵を用意する。
