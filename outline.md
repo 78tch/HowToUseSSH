@@ -24,8 +24,8 @@
 1. 物理的に２台のPCを学習環境として用意する。
 2. PC1(Ubuntu)をリモートサーバー、PC2(UbuntuとVMでWindows10)をローカルマシンとする。
 3. PC1に「openssh-server」をインストール、リモートログイン用のユーザーを作成する。
-4. PC2でssh-keygenして秘密鍵（id_rsa）と公開鍵（id_ras.pub）を用意する。
-5. 作成したうちの公開鍵（id_ras.pub）をPC1のリモートログイン用ユーザーの~/.ssh に置く。
+4. PC2でssh-keygenして秘密鍵（id_rsa）と公開鍵（id_rsa.pub）を用意する。
+5. 作成したうちの公開鍵（id_rsa.pub）をPC1のリモートログイン用ユーザーの~/.ssh に置く。
 
 |ポイント|実例|備考|
 |---|---|---|
