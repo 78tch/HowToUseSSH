@@ -33,7 +33,7 @@
 |ログインユーザーの鍵ペア作成|||
 |ログインユーザーの公開鍵の配置|Remote:~/.ssh/authorized_keys||
 |ログインユーザーの秘密鍵の配置|Local:~/.ssh/authorized_keys||
-|ローカルマシンにリモートサーバーを登録|~/.ssh/known_hosts||
+|ローカルマシンにリモートサーバーを登録|Local:~/.ssh/known_hosts||
 
 ## Step2.Vagrant と Virtualbox を使ってVMを構築・設定・破棄する
 1. まずは `vagrant up` してみる。
