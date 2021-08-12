@@ -25,14 +25,14 @@
 2. PC1(Ubuntu)をリモートサーバー、PC2(UbuntuとVMでWindows10)をローカルマシンとする。
 3. PC1に「openssh-server」をインストール、リモートログイン用のユーザーを作成する。
 4. PC2でssh-keygenして秘密鍵（id_rsa）と公開鍵（id_rsa.pub）を用意する。
-5. 作成したうちの公開鍵（id_rsa.pub）をPC1のリモートログイン用ユーザーの~/.ssh に置く。
+5. 作成したうちの公開鍵（id_rsa.pub）をPC1のリモートログイン用ユーザーの~/.ssh/authorized_keysにリネームして置く、もしくは追記する。行末　ユーザー名@ホスト名
 
 |ポイント|実例|備考|
 |---|---|---|
 |リモートSSHサーバーの公開鍵|Remote:/etc/ssh/ssh_host_ecdsa_key.pub|サーバーの真性確認|
 |リモートSSHサーバーの秘密鍵|Remote:/etc/ssh/ssh_host_ecdsa_key|ecdsaがデフォ|
 |ログインユーザーの鍵ペア作成|`$ ssh-keygen` |rsaがデフォ|
-|ログインユーザーの公開鍵の配置|Remote:~/.ssh/authorized_keys|id_rsa.pubをコピー|
+|ログインユーザーの公開鍵の配置|Remote:~/.ssh/authorized_keys|id_rsa.pubをリネームまたは追記|
 |ログインユーザーの秘密鍵の配置|Local:~/.ssh/id_rsa|id_rsaをコピー|
 |ローカルマシンにリモートサーバーを登録|Local:~/.ssh/known_hosts||
 
