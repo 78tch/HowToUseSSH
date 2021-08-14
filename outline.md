@@ -41,6 +41,7 @@
 2. boxを指定して仮想マシンを起動、停止、破棄してみる。
 3. ホスト名やIPアドレスを指定してみる。
 4. vagrantでどこまで設定するか・シェルプロビジョニング
+5. VMとホストマシンの共有フォルダ
 
 |操作|サブコマンド|備考|
 |---|---|---|
@@ -58,6 +59,7 @@
 |ホスト名|config.vm.hostname = "hoge"||
 |IP（ホスト）|config.vm.network :private_ network, ip:" 192. 168. 33. 11"||
 |IP（ブリッジ）|config.vm.network :public_ network, ip:" 192. 168. 33. 11"||
+|shared folders|/vagrant => ~/My_vagrant_folder||
 
 ●公式ドキュメント：  
 https://www.vagrantup.com/docs/vagrantfile/machine_settings
